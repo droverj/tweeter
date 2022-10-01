@@ -1,0 +1,29 @@
+.transparentImg {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 520px;
+  padding-top: 120px;
+  position: absolute;
+}
+
+header {
+  display: inline-flex;
+  width: 100%;
+  height: 520px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #B8860B;
+}
+
+.profPic {
+  padding-top: 120px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+}
