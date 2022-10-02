@@ -1,12 +1,3 @@
-.transparentImg {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  height: 520px;
-  padding-top: 120px;
-  position: absolute;
-}
 
 header {
   display: inline-flex;
@@ -15,15 +6,14 @@ header {
   align-items: center;
   flex-direction: column;
   background-color: #B8860B;
+  background-image: url("../images/45-degree-fabric-light.png");
 }
 
 .profPic {
   padding-top: 120px;
 }
 
-h2 {
+.profileName {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 3px 3px 3px #ababab;
 }

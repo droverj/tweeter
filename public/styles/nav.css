@@ -18,6 +18,8 @@ nav {
   order: 0;
   font-size: 30px;
   padding-bottom: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
 }
 
 #tweetButton {
@@ -28,7 +30,6 @@ nav {
   padding-top: 2px;
   color: #D21404;
   font-size: 30px;
-  /* color: red; */
 }
 
 #logo {
@@ -36,10 +37,5 @@ nav {
   font-family: 'Bungee', cursive, sans-serif;
   font-size: 1.5em;
   align-items: flex-end;
-}
-
-#bold {
-  font-weight: bolder;
-  padding-right: 10px; 
 }
 

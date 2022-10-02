@@ -29,6 +29,8 @@ body {
  main {
   display: flex;
   width: 90%;
-  justify-content: center;
   background-color: #f4f1ec;
+  padding-left: 10%;
+  justify-content: center;
+  flex-direction: column;
  }
