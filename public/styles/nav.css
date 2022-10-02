@@ -1,41 +1,34 @@
 
 nav {
   display: flex;
-  flex-direction: column;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
   width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  flex-flow: column;
+  align-items: flex-end;
+  justify-content: space-between;
   position: fixed;
-}
-
-#newTweet {
-  display: flex;
-  justify-content: flex-end;
-  order: 0;
-  font-size: 30px;
-  padding-bottom: 5px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: italic;
 }
 
 #tweetButton {
   display: flex;
   align-self: flex-end;
-  order: 3;
   padding-right: 3em;
-  padding-top: 2px;
   color: #D21404;
-  font-size: 30px;
+  padding-bottom: .5em;
 }
 
-#logo {
+.logo {
   display: flex;
   font-family: 'Bungee', cursive, sans-serif;
   font-size: 1.5em;
-  align-items: flex-end;
+  margin-bottom: .5em;
+}
+
+#newTweetSection {
+  display: flex;
+  flex-direction: column;
 }
 
