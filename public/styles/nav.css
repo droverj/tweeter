@@ -14,14 +14,13 @@ nav {
 
 #tweetButton {
   display: flex;
-  align-self: flex-end;
-  padding-right: 3em;
   color: #D21404;
+  padding-right: 3em;
   padding-bottom: .5em;
+  align-self: flex-end;
 }
 
 .logo {
-  display: flex;
   font-family: 'Bungee', cursive, sans-serif;
   font-size: 1.5em;
   margin-bottom: .5em;
