@@ -2,19 +2,19 @@
   display: flex;
   width: 100%;
   background-color: #f4f1ec;
-  flex-direction: column;
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom-width: 3px;
+  margin-bottom: .5em;
+  margin-top: .5em;
 }
 
-.below-input {
+/* .below-input {
   display: flex;
-  padding-top: 1em;
   justify-content: space-between;
   font-family: 'Bungee', cursive, sans-serif;
-}
+} */
 
 button {
   background-color: #4056A1;
