@@ -11,6 +11,8 @@ const characterCount = function() {
       counter[0].value = result;
       if (result < 0) {
         counter[0].style.color = 'red';
+      } else {
+        counter[0].style.color = '#545149';
       }
     });
   });
