@@ -1,0 +1,44 @@
+.tweet {
+  background-color: white;
+  border-width: 5px;
+  border-style:solid;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+#tweet {
+  display: flex;
+  background-color: yellow;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article {
+  background-color: burlywood;
+  border-color: #545149;
+  border-style: solid;
+  border-width: 0px 0px 3px 0px;
+  height: 2em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  height: 4em;
+}
+
+footer {
+  font-size: .5em;
+  padding-top: 1em;
+}
+
+h3 {
+  margin: 0px;
+}
+
+div.user {
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* align-content: flex-start; */
+  /* align-items: flex-end; */
+  /* flex-direction: column; */
+  /* justify-content: flex-start; */
+}
