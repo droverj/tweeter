@@ -7,9 +7,11 @@ function getTweets() {
     
     for (const tweets of data) {
       const $user = addUser(tweets);
-      // const $tweet = addTweet(tweets);
-      // const $date = addDate(tweets);
-      $('.tweets').prepend($user);
+      const $tweet = addTweet(tweets);
+      const $date = addDate(tweets);
+      const $newDiv = $('<div>').addClass("new-tweet");
+      $('.tweets').append($newDiv);
+      $('.tweet').prepend($user, $tweet, $date);
     }
 
   })
@@ -29,10 +31,6 @@ function addDate(tweets) {
 
 
 function addUser(tweets) {
-
-  const $newDiv = $('<div>').addClass("new-tweet");
-  $('.tweets').append($newDiv);
-
   const $user = $('<div>').addClass("user");
   const $username = $('<h3>').text(tweets.user.name);
   const $handle = $('<h3 class="handle">').text(tweets.user.handle);
@@ -45,17 +43,8 @@ function addUser(tweets) {
   $user.append($icon, $username);
   $header.append($user);
   $header.append($handle);
-  $newDiv.append($header);
 
-  const $date = $('<footer>').text(tweets.created_at);
-  const symbols = $('<span>').text("symbols here");
-  $date.append(symbols);
-  $newDiv.append($date);
-
-  const $tweet = $('<article>').text(tweets.content.text);
-  $newDiv.append($tweet);
-
-  return $newDiv;
+  return $header;
 }
 
 //   <div class="user">
