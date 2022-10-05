@@ -9,6 +9,7 @@
 
 .new-tweet header {
   display: flex;
+  border-width: 0px 0px 3px 0px;
   background-color: yellow;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -10,7 +10,7 @@ function getTweets() {
 // A function which returns user data as html
 function addTweet(tweets) {
   // Create a div for each tweet
-  const $newDiv = $('<div>').addClass("new-tweet");
+  const $newDiv = $('<div>').addClass("all-tweets");
   $('.tweets').append($newDiv);
 
   // Create a div for user and icon for styling
