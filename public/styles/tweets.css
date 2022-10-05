@@ -26,6 +26,8 @@ article {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   font-size: .5em;
   padding-top: 1em;
 }
@@ -36,9 +38,4 @@ h3 {
 
 div.user {
   display: inline-flex;
-  flex-wrap: wrap;
-  /* align-content: flex-start; */
-  /* align-items: flex-end; */
-  /* flex-direction: column; */
-  /* justify-content: flex-start; */
 }
