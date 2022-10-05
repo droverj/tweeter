@@ -4,36 +4,47 @@
 
 function getTweets() {
   $.get('/tweets').then((data) => {
+
+    for (const tweets of data) {
+      const $user = addUser(tweets); // change data[0] to tweets for loop
+      const $tweet = addTweet(tweets);
+      const $date = addDate(tweets);
+      $('.tweet').prepend($user, $tweet, $date);
+      // $('.tweet').append($tweet);
+      // $('.tweet').append($date);      
+    }
+
+
     console.log(data);
-    const $user = addUser(data[0]);
-    $('.tweet').prepend($user);
   })
 }
 
-function addHandle(tweets) {
-  const $handle = $('<h3 class="handle">').text(tweets.user.handle);
-  // const $tweet = $('<article>').text(tweets.content.text);
-  // const $date = $('<footer>').text(tweets.created_at);
-
-  // const $icon = $('<img id="icon">');
-  // $icon.attr('src', tweets.user.avatar);
-  // $icon.appendTo('#icon');
-
-  
-  return $handle;
+function addTweet(tweets) {
+  const $tweet = $('<article>').text(tweets.content.text);
+  return $tweet;
 }
+
+function addDate(tweets) {
+  const $date = $('<footer>').text(tweets.created_at);
+  const symbols = $('<span>').text("symbols here");
+  $date.append(symbols);
+  return $date;
+}
+
 
 function addUser(tweets) {
   const $user = $('<div>').addClass("user");
   const $username = $('<h3>').text(tweets.user.name);
+  const $handle = $('<h3 class="handle">').text(tweets.user.handle);
 
   const $icon = $('<img id="icon">');
-  $icon.attr('src', tweets.user.avatar);
+  $icon.attr('src', tweets.user.avatars);
   $icon.appendTo('#icon');
 
   const $header = $('<header id="tweet">');
   $user.append($icon, $username);
   $header.append($user);
+  $header.append($handle);
 
   return $header;
 }
@@ -55,5 +66,11 @@ function addUser(tweets) {
 $(() => {
   console.log('document ready')
   getTweets();
+
+  const $newTweet = $("")
+
+  $newTweet.on("event", event => {
+    event.preventDefault();
+  })
 })
 
