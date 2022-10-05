@@ -7,7 +7,7 @@
   padding: 1em;
 }
 
-#tweet {
+.new-tweet header {
   display: flex;
   background-color: yellow;
   flex-wrap: wrap;
@@ -32,7 +32,7 @@ footer {
   padding-top: 1em;
 }
 
-h3 {
+.new-tweet h3 {
   margin: 0px;
 }
 
