@@ -10,8 +10,10 @@ function getTweets() {
 // A function which returns user data as html
 function addTweet(tweets) {
   // Create a div for each tweet
+  // Container for border and shadowbox
+  const $container = $('<div>').addClass("container");
   const $newDiv = $('<div>').addClass("all-tweets");
-  $('.tweets').append($newDiv);
+  $('.tweets').append($container);
 
   // Create a div for user and icon for styling
   const $user = $('<div>').addClass("user");
@@ -35,8 +37,9 @@ function addTweet(tweets) {
   const symbols = $('<span>').text("symbols here");
   $date.append(symbols);
   $newDiv.append($date);
+  $container.append($newDiv);
 
-  return $newDiv;
+  return $container;
 }
 
 $(() => {
