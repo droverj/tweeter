@@ -15,12 +15,12 @@ function addTweet(tweets) {
 
   // Create a div for user and icon for styling
   const $user = $('<div>').addClass("user");
-  const $username = $('<h3>').text(tweets.user.name);
+  const $username = $('<h3 class="username">').text(tweets.user.name);
   const $icon = $('<img id="icon">');
   $icon.attr('src', tweets.user.avatars);
   $icon.appendTo('#icon');
 
-  const $handle = $('<h3>').text(tweets.user.handle);
+  const $handle = $('<h3 class="handle">').text(tweets.user.handle);
   const $header = $('<header>');
 
   $user.append($icon, $username);
@@ -28,13 +28,13 @@ function addTweet(tweets) {
   $header.append($handle);
   $newDiv.append($header);
 
+  const $tweet = $('<article>').text(tweets.content.text);
+  $newDiv.append($tweet);
+
   const $date = $('<footer>').text(tweets.created_at);
   const symbols = $('<span>').text("symbols here");
   $date.append(symbols);
   $newDiv.append($date);
-
-  const $tweet = $('<article>').text(tweets.content.text);
-  $newDiv.append($tweet);
 
   return $newDiv;
 }
