@@ -11,9 +11,9 @@ function getTweets() {
 function addTweet(tweets) {
   // Create a div for each tweet
   // Container for border and shadowbox
-  const $container = $('<div>').addClass("container");
+  const $container = $('<div id="container">');
   const $newDiv = $('<div>').addClass("all-tweets");
-  $('.tweets').append($container);
+  $('.tweets').append($newDiv);
 
   // Create a div for user and icon for styling
   const $user = $('<div>').addClass("user");
@@ -34,8 +34,12 @@ function addTweet(tweets) {
   $newDiv.append($tweet);
 
   const $date = $('<footer>').text(tweets.created_at);
-  const symbols = $('<span>').text("symbols here");
-  $date.append(symbols);
+  const $symbols = $('<div>').addClass("symbols");
+  const flag = $('<i class="fa-solid fa-flag"></i>');
+  const retweet = $('<i class="fa-solid fa-retweet"></i>');
+  const like = $('<i class="fa-solid fa-heart"></i>');
+  $symbols.append(flag, retweet, like);
+  $date.append($symbols);
   $newDiv.append($date);
   $container.append($newDiv);
 

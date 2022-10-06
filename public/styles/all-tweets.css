@@ -1,4 +1,4 @@
-.container {
+#container {
   border-color: #545149;
   border-width: 4px;
   border-style: solid;
@@ -6,25 +6,18 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
-/* .all-tweets {
-  border-color: #545149;
-  border-width: 4px;
-  border-style: solid;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-} */
 
 .all-tweets header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 
 .user {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .all-tweets article {
@@ -33,6 +26,7 @@
   height: 4em;
   align-items: center;
   font-weight: bold;
+  pointer-events: none;
 }
 
 .all-tweets footer {
@@ -40,6 +34,7 @@
   justify-content: space-between;
   font-size: .5em;
   padding-top: 1em;
+  pointer-events: none;
 }
 
 .all-tweets h3 {
@@ -47,8 +42,8 @@
   padding-left: 10px;
 }
 
-.all-tweets:hover {
-  box-shadow: 5px 10px;
+#container:hover {
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.4);
   color: #d3d3d3
 }
 
