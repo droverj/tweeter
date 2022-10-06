@@ -34,7 +34,7 @@ function addTweet(tweets) {
   $newDiv.append($tweet);
 
   const $date = $('<footer>').text(tweets.created_at);
-  const $symbols = $('<div>').addClass("symbols");
+  const $symbols = $('<span>').addClass("symbols");
   const flag = $('<i class="fa-solid fa-flag"></i>');
   const retweet = $('<i class="fa-solid fa-retweet"></i>');
   const like = $('<i class="fa-solid fa-heart"></i>');

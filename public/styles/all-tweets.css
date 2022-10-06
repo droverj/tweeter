@@ -11,13 +11,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  pointer-events: none;
 }
 
 .user {
   display: flex;
   align-items: center;
-  pointer-events: none;
 }
 
 .all-tweets article {
@@ -26,15 +24,13 @@
   height: 4em;
   align-items: center;
   font-weight: bold;
-  pointer-events: none;
 }
 
 .all-tweets footer {
   display: flex;
   justify-content: space-between;
-  font-size: .5em;
+  font-size: .7em;
   padding-top: 1em;
-  pointer-events: none;
 }
 
 .all-tweets h3 {
@@ -48,10 +44,27 @@
 }
 
 .handle {
-  color: #d3d3d3;
+  color: 	#C0C0C0;
   font-weight: bold;
 }
 
 .username {
   font-weight: lighter;
+}
+
+.symbols {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-retweet:hover {
+  color: #BDB5D5;
+}
+
+.fa-flag:hover {
+  color: #770737
+}
+
+.fa-heart:hover {
+  color: lightpink;
 }
