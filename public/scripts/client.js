@@ -4,14 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-function getTweets() {
-  $.get('/tweets').then((data) => {
-    for (const tweets of data) {
-      const $user = createTweetElement(tweets);
-      $('.tweets').prepend($user);
-    }
-  });
-}
 
 // A function which returns user data as html
 function createTweetElement(tweets) {
@@ -53,9 +45,15 @@ function createTweetElement(tweets) {
 }
 
 $(() => {
-  console.log('document ready');
-
-  getTweets();
+  function loadTweets() {
+    $.get('/tweets').then((data) => {
+      for (const tweets of data) {
+        const $user = createTweetElement(tweets);
+        $('.tweets').prepend($user);
+      }
+    });
+  }
+  loadTweets();
 
   const $form = $('#newTweet');
 
@@ -75,7 +73,7 @@ $(() => {
     const formSubmission = $(event.target).serialize();
     $.post('/tweets', formSubmission).then(response => {
       console.log(response);
-      getTweets();
+      loadTweets();
     })
   });
 });
