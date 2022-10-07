@@ -9,6 +9,7 @@ const characterCount = function() {
       const $counter = $('.counter');
 
       $counter[0].innerText = result;
+
       if (result < 0) {
         $counter[0].style.color = 'red';
       } else {

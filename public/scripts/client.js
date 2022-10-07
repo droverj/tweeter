@@ -54,18 +54,28 @@ function createTweetElement(tweets) {
 
 $(() => {
   console.log('document ready');
-  
+
   getTweets();
 
   const $form = $('#newTweet');
 
   $form.on("submit", event => {
     event.preventDefault();
+
+    // Number of characters for the text area
+    const $counter = $('.counter');
+    const count = $counter[0].innerText;
+
+    // Prevents the user from submitting their tweet if it is over 140 chars
+    if (count < 0) {
+      alert(`Your tweet has too many characters! ${count}/140 characters used.`);
+      return;
+    }
+
     const formSubmission = $(event.target).serialize();
     $.post('/tweets', formSubmission).then(response => {
       console.log(response);
       getTweets();
-
     })
   });
 });
