@@ -40,7 +40,7 @@
 
 #container:hover {
   box-shadow: 5px 10px rgba(0, 0, 0, 0.4);
-  color: #d3d3d3
+  color: #d3d3d3;
 }
 
 .handle {
@@ -54,11 +54,12 @@
 
 .symbols {
   display: flex;
-  justify-content: space-around;
+  width: 4em;
+  justify-content: space-between;
 }
 
 .fa-retweet:hover {
-  color: #BDB5D5;
+  color: #D68910;
 }
 
 .fa-flag:hover {
