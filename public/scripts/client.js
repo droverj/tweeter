@@ -44,6 +44,10 @@ function createTweetElement(tweets) {
   return $container;
 }
 
+// function renderTweets() {
+  
+// }
+
 $(() => {
   function loadTweets() {
     $.get('/tweets').then((data) => {
@@ -59,8 +63,16 @@ $(() => {
 
   $form.on("submit", event => {
     event.preventDefault();
+    
+    // Text in the textarea
+    const $tweetText = $('#tweet-text').val();
 
-    // Number of characters for the text area
+    if (!$tweetText) {
+      alert(`Your tweet submission cannot be empty!.`);
+      return;
+    }
+
+    // Number of characters for the textarea
     const $counter = $('.counter');
     const count = $counter[0].innerText;
 
@@ -69,9 +81,10 @@ $(() => {
       alert(`Your tweet has too many characters! ${count}/140 characters used.`);
       return;
     }
-
+    
     const formSubmission = $(event.target).serialize();
     $.post('/tweets', formSubmission).then(response => {
+    $('#tweet-text').val('');
       console.log(response);
       loadTweets();
     })
