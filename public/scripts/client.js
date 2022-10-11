@@ -76,7 +76,11 @@ $(() => {
     if (!$tweetText) {
       const $validation = $('.validation').text("⛔️ Please fill in the required field.");
       $validation.slideDown();
-      $validation.slideUp(5000)
+
+      // change background color of text area
+      const textArea = $('#tweet-text');
+      textArea[0].style.background = 'rgba(100%, 0%, 0%, 0.25)';
+      $validation.slideUp(5000, () => textArea[0].style.background = '#f4f1ec');
     }
 
     // Number of characters for the textarea
@@ -87,11 +91,9 @@ $(() => {
     if (count < 0) {
       const $validation = $('.validation').text("⛔️ Your tweet has too many characters!");
       $validation.slideDown();
-      $validation.slideUp(5000)
+      $validation.slideUp(5000);
       $counter[0].innerText = 140;
       $counter[0].style.color = '#545149';
-      // alert(`Your tweet has too many characters! ${count}/140 characters used.`);
-      // return;
     }
 
     const formSubmission = $(event.target).serialize();
@@ -99,6 +101,6 @@ $(() => {
       $('#tweet-text').val('');
       console.log(response);
       loadTweets();
-    })
+    });
   });
 });
