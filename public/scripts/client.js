@@ -31,12 +31,11 @@ function createTweetElement(tweets) {
   const $tweet = $('<article>').text(tweets.content.text);
   $newDiv.append($tweet);
 
-  // const $timestamp = (tweets.created_at);
+  const $timestamp = (tweets.created_at);
 
-//  const date = format(new Date($timestamp));
-//  console.log(date);
+ const date = timeago.format($timestamp);
 
-  const $date = $('<footer>').text(tweets.created_at);
+  const $date = $('<footer>').text(date);
   const $symbols = $('<span>').addClass("symbols");
   const flag = $('<i class="fa-solid fa-flag"></i>');
   const retweet = $('<i class="fa-solid fa-retweet"></i>');
