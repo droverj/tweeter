@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// const { text } = require("body-parser");
+
 
 // A function which returns user data as html
 function createTweetElement(tweets) {
@@ -30,12 +32,12 @@ function createTweetElement(tweets) {
 
   const $tweet = $('<article>').text(tweets.content.text);
   $newDiv.append($tweet);
-
+  
+  // Display time since tweet created
   const $timestamp = (tweets.created_at);
-
- const date = timeago.format($timestamp);
-
+  const date = timeago.format($timestamp);
   const $date = $('<footer>').text(date);
+
   const $symbols = $('<span>').addClass("symbols");
   const flag = $('<i class="fa-solid fa-flag"></i>');
   const retweet = $('<i class="fa-solid fa-retweet"></i>');
@@ -67,12 +69,13 @@ $(() => {
 
   $form.on("submit", event => {
     event.preventDefault();
-    
+
     // Text in the textarea
     const $tweetText = $('#tweet-text').val();
 
     if (!$tweetText) {
-      alert(`Your tweet submission cannot be empty!.`);
+      const $validation = $('.validation').text("⛔️ Please fill in the required field.");
+      $validation.slideDown();
       return;
     }
 
