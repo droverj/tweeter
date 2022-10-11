@@ -76,7 +76,7 @@ $(() => {
     if (!$tweetText) {
       const $validation = $('.validation').text("⛔️ Please fill in the required field.");
       $validation.slideDown();
-      $validation.slideUp(8000)
+      $validation.slideUp(5000)
     }
 
     // Number of characters for the textarea
@@ -85,8 +85,13 @@ $(() => {
 
     // Prevents the user from submitting their tweet if it is over 140 chars
     if (count < 0) {
-      alert(`Your tweet has too many characters! ${count}/140 characters used.`);
-      return;
+      const $validation = $('.validation').text("⛔️ Your tweet has too many characters!");
+      $validation.slideDown();
+      $validation.slideUp(5000)
+      $counter[0].innerText = 140;
+      $counter[0].style.color = '#545149';
+      // alert(`Your tweet has too many characters! ${count}/140 characters used.`);
+      // return;
     }
 
     const formSubmission = $(event.target).serialize();
