@@ -50,10 +50,6 @@ function createTweetElement(tweets) {
   return $container;
 }
 
-// function renderTweets() {
-  
-// }
-
 $(() => {
   function loadTweets() {
     $.get('/tweets').then((data) => {
@@ -81,6 +77,7 @@ $(() => {
       const textArea = $('#tweet-text');
       textArea[0].style.background = 'rgba(100%, 0%, 0%, 0.25)';
       $validation.slideUp(5000, () => textArea[0].style.background = '#f4f1ec');
+      return;
     }
 
     // Number of characters for the textarea
@@ -92,8 +89,7 @@ $(() => {
       const $validation = $('.validation').text("⛔️ Your tweet has too many characters!");
       $validation.slideDown();
       $validation.slideUp(5000);
-      $counter[0].innerText = 140;
-      $counter[0].style.color = '#545149';
+      return;
     }
 
     const formSubmission = $(event.target).serialize();
