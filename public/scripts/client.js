@@ -100,6 +100,7 @@ $(() => {
     $.post('/tweets', formSubmission).then(response => {
       $('#tweet-text').val('');
       console.log(response);
+      $counter[0].innerText = 140;
       loadTweets();
     });
   });
