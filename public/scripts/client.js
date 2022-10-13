@@ -4,4 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const { text } = require("body-parser");
+const createTweetElement = function() {
+  const $tweet = $('<article>');
+  const $header = $('<header>');
+  const $footer = $('<footer>');
+  $tweet.append($header, $footer);
+  return $tweet;
+}
