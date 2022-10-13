@@ -55,7 +55,7 @@ $(() => {
     $.get('/tweets').then((data) => {
       for (const tweets of data) {
         const $user = createTweetElement(tweets);
-        $('.tweets').prepend($user);
+        $('.tweets-container').prepend($user);
       }
     });
   }
