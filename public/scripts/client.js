@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 const createTweetElement = function(tweets) {
   const $container = $('<article>');
   const $header = $('<header>').addClass("user");
@@ -77,4 +51,51 @@ const renderTweets = function(tweets) {
   }
 };
 
-renderTweets(data);
+$(() => {
+  function loadTweets() {
+    $.get('/tweets').then((data) => {
+      renderTweets(data);
+    });
+  }
+
+  loadTweets();
+
+  const $form = $('#newTweet');
+
+  $form.on("submit", event => {
+    event.preventDefault();
+
+    // Text in the textarea
+    const $tweetText = $('#tweet-text').val();
+
+    if (!$tweetText) {
+      const $validation = $('.validation').text("⛔️ Please fill in the required field.");
+      $validation.slideDown();
+
+      // Change background color of text area
+      const textArea = $('#tweet-text');
+      textArea[0].style.background = 'rgba(100%, 0%, 0%, 0.25)';
+      $validation.slideUp(5000, () => textArea[0].style.background = '#f4f1ec');
+      return;
+    }
+
+    // Number of characters in textarea
+    const $counter = $('.counter');
+    const count = $counter[0].innerText;
+
+    // Prevents user from submitting tweet if over 140 chars
+    if (count < 0) {
+      const $validation = $('.validation').text("⛔️ Your tweet has too many characters!");
+      $validation.slideDown();
+      $validation.slideUp(5000);
+      return;
+    }
+
+    const formSubmission = $(event.target).serialize();
+    $.post('/tweets', formSubmission).then(response => {
+      $('#tweet-text').val('');
+      $counter[0].innerText = 140;
+      loadTweets();
+    });
+  });
+});
