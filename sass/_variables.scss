@@ -1,0 +1,14 @@
+$background-color: #f4f1ec;
+$font-color: #545149;
+$secondary-font: 'Bungee', cursive, sans-serif;
+
+
+@mixin flex-theme {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+}

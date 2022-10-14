@@ -8,8 +8,8 @@
 
 .below-input {
   display: flex;
-  font-family: "Bungee", cursive, sans-serif;
   justify-content: space-between;
+  font-family: "Bungee", cursive, sans-serif;
   padding-bottom: 2em;
 }
 .below-input button {

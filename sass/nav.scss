@@ -1,6 +1,7 @@
+@import '_variables';
 
 nav {
-  display: flex;
+  @include flex-theme;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -8,10 +9,9 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   align-items: flex-end;
-  justify-content: space-between;
   position: fixed;
   .logo {
-    font-family: 'Bungee', cursive, sans-serif;
+    font-family: $secondary-font;
     font-size: 1.5em;
     margin-bottom: .5em;
   }

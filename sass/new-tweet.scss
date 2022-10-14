@@ -1,15 +1,16 @@
+@import '_variables';
+
 #tweet-text {
   width: 100%;
-  background-color: #f4f1ec;
+  background-color: $background-color;
   border-width: 0px 0px 5px 0px;
   margin-bottom: .5em;
   margin-top: .5em;
 }
 
 .below-input {
-  display: flex;
-  font-family: 'Bungee', cursive, sans-serif;
-  justify-content: space-between;
+  @include flex-theme;
+  font-family: $secondary-font;
   padding-bottom: 2em;
   button {
     background-color: #4056A1;

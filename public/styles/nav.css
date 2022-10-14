@@ -1,5 +1,6 @@
 nav {
   display: flex;
+  justify-content: space-between;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -7,7 +8,6 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   align-items: flex-end;
-  justify-content: space-between;
   position: fixed;
 }
 nav .logo {

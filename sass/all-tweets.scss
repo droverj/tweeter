@@ -1,14 +1,4 @@
-$font-color: #545149;
-
-@mixin flex-theme {
-  display: flex;
-  justify-content: space-between;
-}
-
-@mixin center {
-  display: flex;
-  align-items: center;
-}
+@import '_variables';
 
 article {
   border-color: $font-color;

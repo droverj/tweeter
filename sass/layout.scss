@@ -14,7 +14,7 @@ html {
  * Global layout stuff
  */
 
-$background-color: #f4f1ec;
+@import '_variables';
 
 body {
   color: #545149;
@@ -23,13 +23,29 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+ width: 90%;
+ background-color: $background-color;
+ padding-left: 10%;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  width: 90%;
-  background-color: $background-color;
-  padding-left: 10%;
- }
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  .feature {
+    width: 33.3%;
+    line-height: 600px;
+  }
+
+  .content {
+    width: 66.7%;
+    float: right
+  }
+
+  .footer {
+    clear: right;
+  }
+}
