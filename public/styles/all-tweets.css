@@ -7,43 +7,45 @@ article {
   margin-bottom: 1em;
 }
 
-.user {
-  display: inline-flex;
-  align-items: center;
-}
-
-.all-tweets article {
-  display: flex;
-  border-bottom: 5px solid #545149;
-  height: 4em;
-  align-items: center;
+p {
+  border-bottom: 1vh solid #545149;
+  padding-bottom: 5vh;
+  margin-bottom: 0px;
   font-weight: bold;
 }
 
-.all-tweets footer {
+.user-id {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-info {
   display: flex;
   justify-content: space-between;
   font-size: 0.7em;
-  padding-top: 1em;
+  padding: 1em 1em 0em 1em;
+  font-weight: bold;
 }
 
-.all-tweets h3 {
-  margin: 0px;
-  padding-left: 10px;
-}
-
-#container:hover {
-  box-shadow: 5px 10px rgba(0, 0, 0, 0.4);
-  color: #d3d3d3;
+#icon {
+  padding-right: 1vw;
 }
 
 #handle {
+  display: flex;
+  align-items: center;
   color: #C0C0C0;
   font-weight: bold;
 }
 
-.username {
-  font-weight: lighter;
+article:hover {
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.4);
+  color: #d3d3d3;
 }
 
 .symbols {
