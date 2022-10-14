@@ -6,10 +6,12 @@
 
 const createTweetElement = function(tweets) {
   const $container = $('<article>');
-  const $header = $('<header>').addClass("user");
-  const $username = $('<label class="username">').text(tweets.user.name);
-  const $handle = $('<label class="handle">').text(tweets.user.handle);
+  const $header = $('<header>').addClass("user-id");
+  const $username = $('<label id="username">').text(tweets.user.name);
+  const $handle = $('<label id="handle">').text(tweets.user.handle);
+  const $headerDiv = $('<div>').addClass("user");
 
+  
   // Displays generated icon for user
   const $icon = $('<img id="icon">');
   $icon.attr('src', tweets.user.avatars);
@@ -29,8 +31,9 @@ const createTweetElement = function(tweets) {
 
   // Add header to the main container
   $container.append($header);
-  $header.append($username);
-  $header.append($icon, $username, $handle);
+  $header.append($headerDiv);
+  $headerDiv.append($icon, $username);
+  $header.append($handle);
 
   // Add tweet text to main container
   const $tweet = $('<p>').text(tweets.content.text);

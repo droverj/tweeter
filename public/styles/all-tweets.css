@@ -1,4 +1,4 @@
-#container {
+article {
   border-color: #545149;
   border-width: 4px;
   border-style: solid;
@@ -7,14 +7,8 @@
   margin-bottom: 1em;
 }
 
-.all-tweets header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .user {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
@@ -43,7 +37,7 @@
   color: #d3d3d3;
 }
 
-.handle {
+#handle {
   color: #C0C0C0;
   font-weight: bold;
 }
