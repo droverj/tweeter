@@ -1,4 +1,3 @@
-
 .main-header {
   display: flex;
   width: 100%;
@@ -7,17 +6,14 @@
   flex-direction: column;
   background-color: #D7A413;
   background-image: url("../images/45-degree-fabric-light.png");
-}
-
-.profPic {
-  padding-top: 120px;
-}
-
-.profName {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.lighten {
-  font-weight: lighter;
+  .profPic {
+    padding-top: 120px;
+  }
+  .profName {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    .lighten {
+      font-weight: lighter;
+    }
+  }
 }

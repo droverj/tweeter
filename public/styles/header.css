@@ -7,16 +7,13 @@
   background-color: #D7A413;
   background-image: url("../images/45-degree-fabric-light.png");
 }
-
-.profPic {
+.main-header .profPic {
   padding-top: 120px;
 }
-
-.profName {
+.main-header .profName {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
-.lighten {
+.main-header .profName .lighten {
   font-weight: lighter;
 }
