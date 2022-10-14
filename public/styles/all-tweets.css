@@ -6,52 +6,45 @@ article {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
-p {
-  border-bottom: 1vh solid #545149;
+article p {
+  border-bottom: 1vh solid;
   padding-bottom: 5vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
-
-.user-id {
+article .user-id {
   display: flex;
   justify-content: space-between;
 }
-
-.user {
+article .user-id .user {
   display: flex;
   align-items: center;
 }
-
-.tweet-info {
+article .user-id #icon {
+  padding-right: 1vw;
+}
+article .user-id #handle {
+  display: flex;
+  align-items: center;
+  color: #C0C0C0;
+  font-weight: bold;
+}
+article .tweet-info {
   display: flex;
   justify-content: space-between;
   font-size: 0.7em;
   padding: 1em 1em 0em 1em;
   font-weight: bold;
 }
-
-#icon {
-  padding-right: 1vw;
-}
-
-#handle {
+article .tweet-info .symbols {
   display: flex;
-  align-items: center;
-  color: #C0C0C0;
-  font-weight: bold;
+  width: 4em;
+  justify-content: space-between;
 }
 
 article:hover {
   box-shadow: 5px 10px rgba(0, 0, 0, 0.4);
   color: #d3d3d3;
-}
-
-.symbols {
-  display: flex;
-  width: 4em;
-  justify-content: space-between;
 }
 
 .fa-retweet:hover {

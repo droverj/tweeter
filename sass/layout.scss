@@ -14,9 +14,11 @@ html {
  * Global layout stuff
  */
 
+$background-color: #f4f1ec;
+
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: $background-color;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -28,6 +30,6 @@ body {
 
  main {
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: $background-color;
   padding-left: 10%;
  }
