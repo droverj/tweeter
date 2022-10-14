@@ -38,8 +38,8 @@ article .tweet-info {
 }
 article .tweet-info .symbols {
   display: flex;
-  width: 4em;
   justify-content: space-between;
+  width: 4em;
 }
 
 article:hover {
