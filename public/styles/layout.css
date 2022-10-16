@@ -31,7 +31,7 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 /* Desktop Styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   body {
     display: flex;
   }
@@ -53,7 +53,7 @@ main {
     padding-top: 1em;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   body nav {
     position: relative;
     background-color: #D7A413;

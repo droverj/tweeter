@@ -34,7 +34,7 @@ main {
  */
 
 /* Desktop Styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   body {
       display: flex;
   
@@ -62,7 +62,7 @@ main {
     }
   }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   body {
       nav {
         position: relative;
