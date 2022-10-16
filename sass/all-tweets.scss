@@ -7,36 +7,43 @@ article {
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+
   p {
     border-bottom: 1vh solid;
     padding-bottom: 5vh;
     margin-bottom: 0px;
     font-weight: bold;
   }
+
   .user-id {
     @include flex-theme;
+
     .user {
       @include center;
     }
+
     #icon {
       padding-right: 1vw;
     }
+
     #handle {
       @include center;
-      color: 	#C0C0C0;
+      color: #C0C0C0;
       font-weight: bold;
     }
   }
+
   .tweet-info {
     @include flex-theme;
     font-size: .7em;
     padding: 1em 1em 0em 1em;
     font-weight: bold;
+
     .symbols {
       @include flex-theme;
       width: 4em;
     }
-  } 
+  }
 }
 
 article:hover {

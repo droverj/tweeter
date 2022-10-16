@@ -7,13 +7,16 @@
   flex-direction: column;
   background-color: $header-color;
   background-image: url("../images/45-degree-fabric-light.png");
+
   .profPic {
     padding-top: 120px;
   }
+
   .profName {
     margin-top: 0px;
     margin-bottom: 0px;
     color: $white-font;
+
     .lighten {
       font-weight: lighter;
     }

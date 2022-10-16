@@ -10,14 +10,17 @@ nav {
   padding-right: 1.5em;
   align-items: flex-end;
   position: fixed;
+
   .logo {
     font-family: $secondary-font;
     font-size: 1.5em;
     margin-bottom: .5em;
   }
+
   #newTweetSection {
     display: flex;
     flex-direction: column;
+
     #tweetButton {
       display: flex;
       color: #D21404;
