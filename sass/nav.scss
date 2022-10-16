@@ -4,7 +4,7 @@ nav {
   @include flex-theme;
   height: 120px;
   background-color: #4056A1;
-  color: #FFFFFF;
+  color: $white-font;
   width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
