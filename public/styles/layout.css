@@ -31,7 +31,7 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 /* Desktop Styles */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
   body {
     display: flex;
   }
@@ -51,5 +51,23 @@ main {
   }
   body .main-header div .profPic {
     padding-top: 1em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body nav {
+    position: relative;
+    background-color: #D7A413;
+    background-image: url("../images/45-degree-fabric-light.png");
+  }
+  body .main-header {
+    margin-bottom: 1em;
+    height: 300px;
+  }
+  body .main-header div .profPic {
+    width: 7em;
+    padding-top: 0em;
+  }
+  body .main-header div .profName {
+    font-size: 2rem;
   }
 }
