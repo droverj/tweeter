@@ -37,11 +37,17 @@ main {
 @media only screen and (min-width: 1025px) {
   body {
     display: flex;
-    flex-direction: row;
+    main {
+      margin-right: 2em;
+      margin-left: 30%;
+      margin-top: 9em;
+      width: 60%;
+    }
     .main-header {
+      position: fixed;
       margin-top: 9em;
       height: 400px;
-      width: 50em;
+      width: 30%;
       margin-left: 2em;
       margin-right: 1em;
       div {
@@ -49,11 +55,6 @@ main {
           padding-top: 1em;
         }
       }
-    }
-    main {
-      margin-right: 2em;
-      margin-top: 8em;
-      width: 150%;
     }
   }
 }
