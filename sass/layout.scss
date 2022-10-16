@@ -34,18 +34,26 @@ main {
  */
 
 /* Tablet Styles */
-@media only screen and (min-width: 768px) {
-  .feature {
-    width: 33.3%;
-    line-height: 600px;
-  }
-
-  .content {
-    width: 66.7%;
-    float: right
-  }
-
-  .footer {
-    clear: right;
+@media only screen and (min-width: 1025px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    .main-header {
+      margin-top: 9em;
+      height: 400px;
+      width: 50em;
+      margin-left: 2em;
+      margin-right: 1em;
+      div {
+        .profPic {
+          padding-top: 1em;
+        }
+      }
+    }
+    main {
+      margin-right: 2em;
+      margin-top: 8em;
+      width: 150%;
+    }
   }
 }
